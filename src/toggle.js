@@ -7,7 +7,7 @@ class ToggleFolder extends Component {
         super(props);
         this.state = {
             value: props.name,
-            isHidden: true,
+            isShown: true,
         };
         
     }
@@ -15,13 +15,13 @@ class ToggleFolder extends Component {
     
     handleHide = () => {
             this.setState({ 
-                isHidden: false
+                isShown: false
             })
     }
 
     handleShow = () => {
             this.setState({
-                isHidden: true
+                isShown: true
             })
     }
 
@@ -30,7 +30,7 @@ class ToggleFolder extends Component {
             <div>
             <p>{this.state.value}</p>
 
-            {this.state.isHidden ? 
+            {this.state.isShown ? 
             <ul>
                 <li>File1</li>
                 <li>File2</li>
